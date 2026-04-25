@@ -1,0 +1,58 @@
+{
+  "experiment_name": "dsfl_avg_ota_zero_shot",
+  "data_setups": {
+    "root": "./data",
+    "dataset_name": "mnist",
+    "n_clients": 100,
+    "batch_size": 32,
+    "num_workers": 0,
+    "partition": {
+      "method": "lda",
+      "alpha": 0.3,
+      "seed": 123
+    },
+    "unlabeled_pool_size": 20000
+  },
+  "train_setups": {
+    "device": "cpu",
+    "seed": 2022,
+    "n_trials": 20,
+    "n_rounds": 1,
+    "local_epochs": 1,
+    "sample_ratio": 1.0,
+    "model": {
+      "name": "fedavg_mnist",
+      "params": {}
+    },
+    "algo": {
+      "name": "dsfl_avg_ota_zero_shot",
+      "params": {
+        "zero_shot_client_epochs": 30,
+        "unlabeled_pool_size": 20000,
+        "unlabeled_batch_size": 32,
+        "server_distill_epochs": 30,
+        "S_list": [1, 2, 4, 8, 16, 32, 64, 128],
+        "M_list": [1],
+        "ota_target_snr_db": 5.0,
+        "ota_seed": 123,
+        "eval_unlabeled_counts": [250, 500, 1000, 2000, 4000, 8000, 16000]
+      }
+    },
+    "optimizer": {
+      "name": "sgd",
+      "params": {
+        "lr": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.0005
+      }
+    },
+    "scheduler": {
+      "enabled": true,
+      "name": "step",
+      "params": {
+        "step_size": 25,
+        "gamma": 0.5
+      }
+    }
+  }
+}
