@@ -1,4 +1,4 @@
-````markdown
+
 # SCENE OTA-FD
 
 This repository provides the simulation code used to reproduce the numerical results for the paper:
@@ -149,4 +149,4 @@ Boise State University
 ```
 
 ```
-```
+
