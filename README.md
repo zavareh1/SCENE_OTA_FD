@@ -144,9 +144,7 @@ This repository is released under the license included in `LICENSE`.
 For questions, please contact:
 
 ```text
-Zavareh Bozorgasl  
-Boise State University
+Zavarehbozorgasl@u.boisestate.edu  
 ```
 
-```
 
