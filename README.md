@@ -5,7 +5,7 @@ This repository provides the simulation code used to reproduce the numerical res
 
 **SCENE OTA-FD: Self-Centering Noncoherent Estimator for Over-the-Air Federated Distillation**
 
-The WCL letter version of this work is currently under review. An extended version of the paper is available on arXiv:
+An extended version of the paper is available on arXiv:
 
 https://arxiv.org/abs/2602.15326
 
